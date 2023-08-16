@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -19,5 +20,12 @@ class PostController extends Controller
             ->get();
 
         return response()->json($posts);
+    }
+
+    public function category($categoryId)
+    {
+        $category = Category::find($categoryId);
+
+        return response()->json($category->posts);
     }
 }

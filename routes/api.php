@@ -10,4 +10,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/posts', [PostController::class, 'index'])->name('post.index');
+Route::get('/posts/{category_id}', [PostController::class, 'category'])->name('post.category');
+
 Route::get('/categories', [CategoryController::class, 'index'])->name('category.index');
