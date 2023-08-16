@@ -14,6 +14,7 @@
                                 <th>Content</th>
                                 <th>Slug</th>
                                 <th>Category</th>
+                                <th>Activity</th>
                                 <th>Created</th>
                                 <th>Updated</th>
                             </tr>
@@ -27,6 +28,7 @@
                                     <td>{{ Str::limit($post->content) }}</td>
                                     <td>{{ $post->slug }}</td>
                                     <td>{{ $post->category->title }}</td>
+                                    <td>{{ $post->is_active }}</td>
                                     <td>{{ $post->created_at }}</td>
                                     <td>{{ $post->updated_at }}</td>
                                 </tr>
