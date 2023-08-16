@@ -13,20 +13,20 @@
                                 <th>Title</th>
                                 <th>Content</th>
                                 <th>Slug</th>
-                                <th>Category_id</th>
+                                <th>Category</th>
                                 <th>Created</th>
                                 <th>Updated</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($posts as $post)
-                                <tr>
+                                <tr onclick="console.log(12)" style="cursor: pointer">
                                     <td>{{ $post->order }}</td>
                                     <td>{{ $post->id }}</td>
                                     <td>{{ $post->title }}</td>
                                     <td>{{ Str::limit($post->content) }}</td>
                                     <td>{{ $post->slug }}</td>
-                                    <td>{{ $post->category_id }}</td>
+                                    <td>{{ $post->category->title }}</td>
                                     <td>{{ $post->created_at }}</td>
                                     <td>{{ $post->updated_at }}</td>
                                 </tr>
