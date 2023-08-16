@@ -22,6 +22,13 @@ class PostController extends Controller
         return response()->json($posts);
     }
 
+    public function single($post_slug)
+    {
+        $post = Post::where('slug', $post_slug)->first();
+
+        return response()->json($post);
+    }
+
     public function category($categoryId)
     {
         $category = Category::find($categoryId);
