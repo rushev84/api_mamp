@@ -13,5 +13,5 @@ Route::post('/login', [LoginController::class, 'enter'])->name('login.enter');
 Route::get('/logout', [LoginController::class, 'logout'])->name('login.logout');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/admin/posts', [AdminController::class, 'posts'])->name('admin.posts');
 });
