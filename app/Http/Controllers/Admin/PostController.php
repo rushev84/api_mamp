@@ -1,13 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class PostController extends Controller
 {
-   public function posts()
+   public function index()
    {
        return view('admin.posts', [
            'posts' => Post::all(),

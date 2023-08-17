@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\Admin\PostController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,5 +14,5 @@ Route::post('/login', [LoginController::class, 'enter'])->name('login.enter');
 Route::get('/logout', [LoginController::class, 'logout'])->name('login.logout');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/admin/posts', [AdminController::class, 'posts'])->name('admin.posts');
+    Route::get('/admin/posts', [PostController::class, 'index'])->name('admin.posts.index');
 });
