@@ -11,10 +11,17 @@
             ])
         @endcomponent
 
+        @component('components.content-component')
 
-        @component('components.post-table-component', [
-            'posts' => $posts,
-            ])
+            @component('components.card-component')
+
+                @component('components.post-table-component', [
+                    'posts' => $posts,
+                    ])
+                @endcomponent
+
+            @endcomponent
+
         @endcomponent
 
     @endcomponent

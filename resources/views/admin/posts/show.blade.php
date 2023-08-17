@@ -11,11 +11,18 @@
             ])
         @endcomponent
 
+        @component('components.content-component')
 
-{{--        @component('components.post-table-component', [--}}
-{{--            'posts' => $posts,--}}
-{{--            ])--}}
-{{--        @endcomponent--}}
+            @component('components.card-component')
+
+                @component('components.post-view-component', [
+                    'post' => $post,
+                    ])
+                @endcomponent
+
+            @endcomponent
+
+        @endcomponent
 
     @endcomponent
 
