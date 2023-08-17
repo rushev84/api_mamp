@@ -22,7 +22,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Авторизация успешна
-            return redirect()->route('admin.index');
+            return redirect()->route('admin.posts');
         } else {
             // Неверные учетные данные
             return back()->withErrors([
