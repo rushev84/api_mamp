@@ -41,7 +41,7 @@
                                     <td>{{ $post->updated_at }}</td>
                                     <td>
                                         <div class="icon-container">
-                                            <a href="" class="text-success"><i class="fas fa-eye icon mr-2"></i></a>
+                                            <a href="{{ route('admin.posts.show', 2005) }}" class="text-success"><i class="fas fa-eye icon mr-2"></i></a>
                                             <a href=""><i class="fas fa-pen icon mr-2"></i></a>
                                             <a href="" class="text-danger"><i class="fas fa-trash-alt icon"></i></a>
                                         </div>
