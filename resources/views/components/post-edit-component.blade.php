@@ -35,8 +35,15 @@
             <label>Category</label>
             <select class="form-control" name="category">
                 @foreach($categories as $category)
-                    <option {{ $category->id === $post->category->id ? 'selected' : '' }}>{{ $category->title }}</option>
+                    <option {{ $category->id === $post->category->id ? 'selected' : '' }} value="{{ $category->id }}">{{ $category->title }}</option>
                 @endforeach
+            </select>
+        </div>
+        <div class="form-group w-50">
+            <label>Activity</label>
+            <select class="form-control" name="is_active">
+                <option {{ $post->is_active === 1 ? 'selected' : '' }} value="1">Yes</option>
+                <option value="0">No</option>
             </select>
         </div>
     {{--    <div class="form-group">--}}

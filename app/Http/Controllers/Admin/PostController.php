@@ -34,17 +34,24 @@ class PostController extends Controller
 
     public function store($id, Request $request)
     {
-        $image = $request->file('image');
-        $fileName = uniqid('', true) . '_' . $image->getClientOriginalName();
-        $destination = storage_path('app/public/upload');
-        $image->move($destination, $fileName);
-
+//        dd($request);
         $post = Post::find($id);
+
+        $image = $request->file('image');
+        if($image) {
+            $fileName = uniqid('', true) . '_' . $image->getClientOriginalName();
+            $destination = storage_path('app/public/upload');
+            $image->move($destination, $fileName);
+
+            $post->image = '/storage/upload/' . $fileName;
+        }
+
         $post->id = $request->input('id');
         $post->title = $request->input('title');
         $post->content = $request->input('content');
         $post->slug = $request->input('slug');
-        $post->image = '/storage/upload/' . $fileName;
+        $post->category_id = $request->input('category');
+        $post->is_active = $request->input('is_active');
         $post->save();
 
         return redirect()->route('admin.posts.show', $post->id);
