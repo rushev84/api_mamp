@@ -19,22 +19,18 @@
             <label for="slug">Slug</label>
             <input class="form-control" id="slug" name="slug" value="{{ $post->slug }}">
         </div>
-
-                            <input type="file" id="image" name="image">
-
-
-{{--        <div class="form-group w-50">--}}
-{{--            <label for="image">Image</label>--}}
-{{--            <div class="input-group">--}}
-{{--                <div class="custom-file">--}}
-{{--                    <input type="file" class="custom-file-input" id="image" name="image">--}}
-{{--                    <label class="custom-file-label" for="image">{{ $post->image }}</label>--}}
+        <div class="form-group w-50">
+            <label for="image">Image</label>
+            <div class="input-group">
+                <div class="custom-file">
+                    <input type="file" class="custom-file-input" id="image" name="image">
+                    <label class="custom-file-label" for="image">{{ $post->image }}</label>
+                </div>
+{{--                <div class="input-group-append">--}}
+{{--                    <span class="input-group-text">Upload</span>--}}
 {{--                </div>--}}
-{{--    --}}{{--            <div class="input-group-append">--}}
-{{--    --}}{{--                <span class="input-group-text">Upload</span>--}}
-{{--    --}}{{--            </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
+            </div>
+        </div>
         <div class="form-group w-50">
             <label>Category</label>
             <select class="form-control" name="category">
