@@ -1,3 +1,10 @@
+<style>
+    .icon-container {
+        display: flex;
+        align-items: center;
+    }
+</style>
+
 <section class="content">
     <div class="container-fluid">
         <div class="row">
@@ -17,11 +24,12 @@
                                 <th>Activity</th>
                                 <th>Created</th>
                                 <th>Updated</th>
+                                <th style="visibility: hidden">111</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($posts as $post)
-                                <tr onclick="console.log(12)" style="cursor: pointer">
+                                <tr>
                                     <td>{{ $post->order }}</td>
                                     <td>{{ $post->id }}</td>
                                     <td>{{ $post->title }}</td>
@@ -31,6 +39,13 @@
                                     <td>{{ $post->is_active }}</td>
                                     <td>{{ $post->created_at }}</td>
                                     <td>{{ $post->updated_at }}</td>
+                                    <td>
+                                        <div class="icon-container">
+                                            <a href="" class="text-success"><i class="fas fa-eye icon mr-2"></i></a>
+                                            <a href=""><i class="fas fa-pen icon mr-2"></i></a>
+                                            <a href="" class="text-danger"><i class="fas fa-trash-alt icon"></i></a>
+                                        </div>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>
