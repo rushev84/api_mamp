@@ -52,6 +52,9 @@
 {{--    <script src="{{ asset('plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>--}}
 <script src="{{ asset('plugins/summernote/summernote-bs4.min.js') }}"></script>
 
+
+<script src="{{ asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
+
     <!-- AdminLTE App -->
     <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
     <!-- AdminLTE for demo purposes -->
@@ -81,6 +84,12 @@
         $('#summernote').summernote()
 
     })
+</script>
+
+<script>
+    $(function () {
+        bsCustomFileInput.init();
+    });
 </script>
 </body>
 </html>

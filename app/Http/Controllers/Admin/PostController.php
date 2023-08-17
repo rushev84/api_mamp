@@ -30,4 +30,9 @@ class PostController extends Controller
             'categories' => Category::all(),
         ]);
     }
+
+    public function store($id, Request $request)
+    {
+        dd($request);
+    }
 }

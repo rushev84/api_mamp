@@ -17,4 +17,5 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/posts', [PostController::class, 'index'])->name('admin.posts.index');
     Route::get('/admin/posts/{id}', [PostController::class, 'show'])->name('admin.posts.show');
     Route::get('/admin/posts/{id}/edit', [PostController::class, 'edit'])->name('admin.posts.edit');
+    Route::post('/admin/posts/{id}/store', [PostController::class, 'store'])->name('admin.posts.store');
 });
