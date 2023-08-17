@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="{{ asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css') }}">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('plugins/summernote/summernote-bs4.min.css') }}">
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -48,6 +50,8 @@
 {{--    <script src="{{ asset('plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>--}}
 {{--    <script src="{{ asset('plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>--}}
 {{--    <script src="{{ asset('plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>--}}
+<script src="{{ asset('plugins/summernote/summernote-bs4.min.js') }}"></script>
+
     <!-- AdminLTE App -->
     <script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
     <!-- AdminLTE for demo purposes -->
@@ -70,5 +74,13 @@
             });
         });
     </script>
+
+<script>
+    $(function () {
+        // Summernote
+        $('#summernote').summernote()
+
+    })
+</script>
 </body>
 </html>

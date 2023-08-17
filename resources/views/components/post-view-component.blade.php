@@ -35,11 +35,7 @@
 <br>
 <h5>Activity</h5>
 <div style="width: 700px">
-    @if($post->is_active === 1)
-        Yes
-    @else
-        No
-    @endif
+    {{ $post->is_active === 1 ? 'Yes' : 'No' }}
 </div>
 <br>
 <h5>Created</h5>

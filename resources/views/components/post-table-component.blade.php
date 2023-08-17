@@ -41,7 +41,7 @@
             <td>
                 <div class="icon-container">
                     <a href="{{ route('admin.posts.show', $post->id) }}" class="text-success"><i class="fas fa-eye icon mr-2"></i></a>
-                    <a href=""><i class="fas fa-pen icon mr-2"></i></a>
+                    <a href="{{ route('admin.posts.edit', $post->id) }}"><i class="fas fa-pen icon mr-2"></i></a>
                     <a href="" class="text-danger"><i class="fas fa-trash-alt icon"></i></a>
                 </div>
             </td>
